@@ -4,7 +4,10 @@
   "description": "Starter kit environment tutorial",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "run-server":"babel-node buildScripts/srcServer.js",
+    "local-tunnel": "lt --port 3000",
+    "start": "npm-run-all --parallel run-server local-tunnel"
   },
   "repository": {
     "type": "git",
