@@ -6,8 +6,10 @@
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
     "run-server":"babel-node buildScripts/srcServer.js",
+    "lint":"esw webpack.config.* src buildScripts --color",
+    "lint-watch":"npm run lint -- --watch",
     "local-tunnel": "lt --port 3000",
-    "start": "npm-run-all --parallel run-server local-tunnel"
+    "start": "npm-run-all --parallel run-server local-tunnel lint-watch"
   },
   "repository": {
     "type": "git",
