@@ -9,7 +9,9 @@
     "lint":"esw webpack.config.* src buildScripts --color",
     "lint-watch":"npm run lint -- --watch",
     "local-tunnel": "lt --port 3000",
-    "start": "npm-run-all --parallel run-server local-tunnel lint-watch"
+    "test":"mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
+    "test-watch":"npm run test -- --watch",
+    "start": "npm-run-all --parallel run-server local-tunnel lint-watch test-watch"
   },
   "repository": {
     "type": "git",
