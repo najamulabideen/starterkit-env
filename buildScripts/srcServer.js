@@ -20,6 +20,14 @@ app.get('/', function (req, res) {
 
 });
 
+app.get('/users', function (req, res) {
+  res.json([
+    {"id":1, "firstName":"Najam", "lastName":"Tariq", "email":"najamulabideen@gmail.com"},
+    {"id":2, "firstName":"Abdul Qudoos", "lastName":"Mehdi", "email":"abdulqudoos@gmail.com"},
+    {"id":3, "firstName":"Rizwan", "lastName":"Haider", "email":"rizwan.seing@gmail.com"}
+  ]);
+});
+
 app.listen(port, function (err) {
   if (err) {
     console.log(err);
