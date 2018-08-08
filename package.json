@@ -17,6 +17,7 @@
     "prebuild":"npm-run-all clean-dist test lint",
     "build":"babel-node buildScripts/build.js",
     "postbuild":"babel-node buildScripts/distServer.js",
+    "deploy":"surge ./dist",
     "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel run-server local-tunnel lint-watch test-watch start-mockapi"
   },
