@@ -25,7 +25,7 @@ webpack(webpackConfig).run((err,stats)=>{
 
   console.log(`Webpack stats: ${stats}`);
 
-  console.log(chalk.green('Your app has been built adn written to /dist '));
+  console.log(chalk.green('Your app has been built and written to /dist '));
 
   return 0;
 });

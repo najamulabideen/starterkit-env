@@ -2,7 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+    <!-- BEGIN TrackJS -->
+    <script>
+      window._trackJs = {
+        token: '<%=htmlWebpackPlugin.options.trackJSToken%>'
+      };
+
+    </script>
+    <script src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+    <!-- END TrackJS -->
+    <% } %>
+    <meta charset="UTF-8">
 </head>
 
 <body>
@@ -13,13 +24,13 @@
       <th>Id</th>
       <th>First Name</th>
       <th>Last Name</th>
-      <th>Email</th>
+      <th>Email Address</th>
     </thead>
     <tbody id="users">
 
     </tbody>
   </table>
-  <script src="bundle.js"></script>
+  <!-- <script src="bundle.js"></script> -->
   <script src="https://cdn.polyfill.io/v2/polyfill.js?features=fetch"></script>
 
 </body>
